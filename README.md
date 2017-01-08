@@ -51,7 +51,6 @@ This means, for example, that you *cannot* store Procs in an SQLite3Hash
 Contains all the Hash class methods from 2.0.0 except:
 
 1. No deprecated methods
-
 2. Methods not implemented:  rehash, compare_by_identity, SQLite3Hash[]
 
 3. Methods that are supposed to return a hash do so (instead of returning an SQLite3Hash), for example 'to_h'
@@ -59,6 +58,7 @@ Contains all the Hash class methods from 2.0.0 except:
 4. try_convert also requires db and other parameters as per SQLite3Hash.new
 
 5. Uses the value of an object instead of the object as a key, i.e.:
+
     a = [ "a", "b" ]
     h = { a => 100 }
     sh = SQLite3Hash('tmp.db')
