@@ -22,7 +22,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+SQLite3Hash is a persistent simple Hash backed by sqlite3.
+
+You can use it like a Hash object, but all data is stored in SQLite3,
+which can be re-used over multiple instantiations of ruby.
+
+Example case:
+
+    require 'sqlite3_hash'
+    
+    shash = SQLite3Hash.new('tmpfile.db')
+    shash['int'] = 42
+    shash[:sym] = { a: 12, b: 32 }
+    shash[99.1] = [1,[10,20],3]  
+    shash = nil
+
+    # Some point later..  or even in another ruby instance:
+    shash = SQLite3Hash.new('tmpfile.db')
+    shash['int']   # => 42
+    shash.to_s     # => {"int"=>42, :sym=>{:a=>12, :b=>32}, 99.1=>[1, [10, 20], 3]}
+
 
 ## Development
 
