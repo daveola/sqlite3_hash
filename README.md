@@ -29,6 +29,7 @@ which can be re-used over multiple instantiations of ruby.
 
 Example case:
 
+    require 'rubygems'
     require 'sqlite3_hash'
     
     shash = SQLite3Hash.new('tmpfile.db')
@@ -47,6 +48,13 @@ Handles values of String, Fixnum, Float, and anything that can be Marshalled
 Keys are anything that can be Marshalled.
 
 This means, for example, that you *cannot* store Procs in an SQLite3Hash
+
+You can use the same SQLite3 DB for multiple hashes:
+
+    require 'rubygems'
+    require 'sqlite3_hash'
+    hash1 = SQLite3Hash.new('tmpfile.db','hash1')
+    hash2 = SQLite3Hash.new('tmpfile.db','hash2')
 
 Contains all the Hash class methods from 2.0.0 except:
 
