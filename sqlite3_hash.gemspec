@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["http://Contact.MarginalHacks.com/"]
 
   spec.summary       = %q{A persistent simple Hash backed by sqlite3}
-  spec.description   = %q{A persistent simple Hash backed by sqlite3\n\nContains (almost) the same features/API as the Ruby 2.0.0 Hash object}
+  spec.description   = "A persistent simple Hash backed by sqlite3\n\nContains (almost) the same features/API as the Ruby 2.0.0 Hash object"
   spec.homepage      = "http://MarginalHacks.com/"
   spec.license       = "MIT"
 
