@@ -18,8 +18,8 @@ require "sqlite3_hash/version"
 # 5) Uses the value of an object instead of the object as a key, i.e.:
 #    a = [ "a", "b" ]
 #    h = { a => 100 }
-#    sh = SQLite3Hash('tmp.db')
-#    a[0] = 'z'
+#    sh = SQLite3Hash('tmp.db', h)
+#    a[0] = 'z'   # This only effects 'h' not 'sh'
 #    h	 # => {["z", "b"]=>100}
 #    sh  # => {["a", "b"]=>100}
 
