@@ -2,7 +2,8 @@ require "sqlite3_hash/version"
 
 # Filename:	sqlite3hash.rb
 # Author:	David Ljung Madison <DaveSource.com>
-# See License:	http://MarginalHacks.com/License/
+# More Info:	http://MarginalHacks.com/
+# License:  [MIT License](http://opensource.org/licenses/MIT).
 # Description:	An sqlite3 backed simple hash in ruby
 #
 # Handles values of String, Integer, Float, and anything that can be Marshalled
